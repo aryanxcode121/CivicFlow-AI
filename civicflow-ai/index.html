@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CivicFlow AI</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="app">
+<header class="top"><div class="wrap">
+  <a class="logo" href="#/"><b>CF</b>CivicFlow <i>AI</i></a>
+  <nav>
+    <a href="#/" id="n-home"><span>▦</span><span>Overview</span></a>
+    <a href="#/report" id="n-report"><span>⚑</span><span>Report an issue</span></a>
+    <a href="#/pitch" id="n-pitch"><span>▭</span><span>Pitch mode</span></a>
+  </nav>
+  <div class="sp"></div><span class="bell" aria-hidden="true">🔔︎</span><span class="av">RK</span>
+</div></header>
+
+<!-- OVERVIEW -->
+<main id="v-home">
+ <div class="wrap">
+  <section class="hero">
+   <div>
+    <div class="mono"><span class="coral">01 / Command center</span> &nbsp; Civic signals</div>
+    <h1 class="big">Make every report <span class="coral">count.</span></h1>
+    <p>A clear line from citizen signal to accountable action. CivicFlow helps teams see what needs attention, and why.</p>
+   </div>
+   <div class="acts"><a class="btn" href="#/report">Report an issue ↗</a><a class="lnk" href="#/pitch">See the story →</a></div>
+  </section>
+  <div class="strip mono"><span class="coral">● Live signal</span><span id="stripA">184 reports processed today</span><span id="stripB">23 awaiting human review</span><span>92% routed within 10 min</span><span>Synthetic demo data</span></div>
+  <section class="stats">
+   <div class="stat"><b>184</b><span>Reports today</span><span class="mono teal">+18% vs last week</span></div>
+   <div class="stat"><b id="needN">23</b><span>Need review</span><span class="mono coral">Human gate</span></div>
+   <div class="stat"><b>92%</b><span>Routed in 10 min</span><span class="mono teal">Target: 85%</span></div>
+   <div class="stat"><b>4.6h</b><span>Avg. resolution</span><span class="mono teal">↓ 1.2h this week</span></div>
+  </section>
+  <div class="cols">
+   <section>
+    <div class="mono coral">02 / <span class="mute">Incoming issue queue</span></div>
+    <div class="qh"><h2>Signals that need a decision</h2><button class="fbtn" id="filt">⛉ Filter</button></div>
+    <div class="tabs" id="tabs"></div>
+    <div id="queue"></div>
+    <div class="log"><div class="mono coral">04 / <span class="mute">Audit trail</span></div><ul id="audit"></ul></div>
+   </section>
+   <aside>
+    <div class="map" id="map"><div class="l mono"><span>Ward 14 / Live map</span><span id="mapN">18 active signals ↗</span></div></div>
+    <div class="dh"><div class="qh"><div><div class="mono coral">03 / <span class="mute">Routing department health</span></div><h2>Where attention flows</h2></div></div><div id="dept"></div></div>
+   </aside>
+  </div>
+ </div>
+</main>
+
+<!-- REPORT -->
+<main id="v-report" class="hide"><div class="rep">
+  <div class="mono"><span class="coral">04 / Capture</span> &nbsp; New civic signal</div>
+  <div class="rhead"><h1 class="big" id="rTitle" style="margin-bottom:0"></h1><div class="num" id="rNum"></div></div>
+  <div class="stepbar" id="stepbar"></div>
+  <div class="rbody"><div id="rForm"></div><div class="side" id="rSide"></div></div>
+</div></main>
+
+<footer id="foot" class="mono"><span>CF / 2026</span><span>AI-assisted civic operations, with a human gate.</span><span>Built for AI Synergy Hackathon</span></footer>
+</div>
+
+<!-- PITCH -->
+<div id="pitch" class="hide">
+  <div class="ph"><a class="logo" href="#/" style="border:0;color:#f3f1ec;font:600 14px var(--sans);letter-spacing:0;text-transform:none"><b>CF</b>CivicFlow <i>AI</i></a><span class="mono">AI Synergy Hackathon / 2026</span><a href="#/">Exit pitch ✕</a></div>
+  <div class="slide" id="slide"></div>
+  <div class="pn"><div class="dots" id="dots"></div><div><button id="prev" aria-label="Previous slide">←</button> <button id="next" aria-label="Next slide">→</button></div></div>
+</div>
+
+<div class="mod hide" id="mod" role="dialog" aria-modal="true"><div class="pan" id="pan"></div></div>
+<div class="toast hide" id="toast"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
